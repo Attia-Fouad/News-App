@@ -103,6 +103,79 @@ Widget defaultFormField({
         border: const OutlineInputBorder(),
       ),
     );
+///////////////////////////
+
+
+Widget designedFormField({
+  fontColor,
+  required TextEditingController controller,
+  required TextInputType type,
+  bool isPassword = false,
+  required String? label,
+  IconData? prefixIcon,
+  IconData? suffixIcon,
+  onSubmit,
+  onChange,
+  onTap,
+  required validator,
+  function,
+}) =>
+    TextFormField(
+      style: TextStyle(
+        color: fontColor ?? Colors.black,
+      ),
+      controller: controller,
+      keyboardType: type,
+      onFieldSubmitted: onSubmit,
+      onChanged: onChange,
+      onTap: onTap,
+      obscureText: isPassword,
+      validator: validator,
+      decoration: InputDecoration(
+        labelStyle: TextStyle(
+          color: fontColor ?? Colors.black,
+        ),
+        hintStyle: TextStyle(
+          color: fontColor ?? Colors.black,
+        ),
+
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(25.0),
+          borderSide: const BorderSide(
+            color: Colors.black26,
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(25.0),
+          borderSide: const BorderSide(
+            color: Colors.black26,
+            width: 2.0,
+          ),
+        ),
+        labelText: label,
+        prefixIcon: Icon(
+          prefixIcon,
+          color: fontColor ?? Colors.black,
+        ),
+        suffixIcon: suffixIcon != null
+            ? IconButton(
+          icon: Icon(
+            suffixIcon,
+            color: fontColor ?? Colors.black,
+          ),
+          onPressed: function,
+        )
+            : null,
+        border: const OutlineInputBorder(),
+      ),
+    );
+
+
+
+////////////////////////////////
+
+
+
 Widget buildArticleItem(article, context) => InkWell(
       onTap: () {
         Navigator.push(

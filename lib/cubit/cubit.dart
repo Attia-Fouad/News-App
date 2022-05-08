@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/cubit/states.dart';
+import 'package:news_app/shared/styles/icon_broken.dart';
 
 import '../modules/news_app/business/business_screen.dart';
 import '../modules/news_app/science/science_screen.dart';
@@ -18,34 +19,34 @@ class NewsCubit extends Cubit<NewsStates>{
   List<BottomNavigationBarItem> bottomItems=[
     const BottomNavigationBarItem(
         icon: Icon(
-          Icons.business,
+          IconBroken.Bag_2,
         ),
       label: 'Business',
     ),
     const BottomNavigationBarItem(
       icon: Icon(
-        Icons.sports,
+        IconBroken.Category,
       ),
       label: 'Sports',
     ),
     const BottomNavigationBarItem(
       icon: Icon(
-        Icons.science,
+          IconBroken.Document,
       ),
       label: 'Science',
     ),
-    // BottomNavigationBarItem(
-    //   icon: Icon(
-    //     Icons.settings,
-    //   ),
-    //   label: 'Settings',
-    // ),
   ];
+
+  List<String> title=[
+    'Business News',
+    'Sports News',
+    'Science News',
+  ];
+  PageController pageController=PageController(initialPage: 0);
   List<Widget> screens=[
     BusinessScreen(),
     const SportsScreen(),
     const ScienceScreen(),
-    //SettingsScreen(),
   ];
   void changeBottomNavBar(index)
   {

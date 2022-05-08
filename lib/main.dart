@@ -16,7 +16,8 @@ Future<void> main() async {
   await CacheHelper.init();
   bool? isDark = CacheHelper.getData(key: 'isDark');
 
-  runApp(MyApp(
+  runApp(
+      MyApp(
     isDark: isDark,
   ));
 }
