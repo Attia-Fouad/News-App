@@ -251,7 +251,7 @@ Widget articleBuilder(list, context, {isSearch = false}) => Conditional.single(
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) => buildArticleItem(list[index], context),
         separatorBuilder: (context, index) => myDivider(),
-        itemCount: 10,
+        itemCount:  list.length,
       ),
       fallbackBuilder: (BuildContext context) =>
           isSearch ? Container() : const Center(child: CircularProgressIndicator()),

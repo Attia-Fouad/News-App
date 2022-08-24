@@ -69,7 +69,7 @@ class NewsCubit extends Cubit<NewsStates>{
         {
           'country':'eg',
           'category':'business',
-          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+          'apiKey':'31941c79e11545b0bae1dd6a68c35d0e',
     }).then((value)
     {
       //print(value.data['articles'][0]['title']);
@@ -99,7 +99,7 @@ class NewsCubit extends Cubit<NewsStates>{
             {
               'country':'eg',
               'category':'sports',
-              'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+              'apiKey':'31941c79e11545b0bae1dd6a68c35d0e',
             }).then((value)
         {
           //print(value.data['articles'][0]['title']);
@@ -135,7 +135,7 @@ class NewsCubit extends Cubit<NewsStates>{
             {
               'country':'eg',
               'category':'science',
-              'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+              'apiKey':'31941c79e11545b0bae1dd6a68c35d0e',
             }).then((value)
         {
           //print(value.data['articles'][0]['title']);
@@ -169,7 +169,7 @@ class NewsCubit extends Cubit<NewsStates>{
         query:
         {
           'q':value,
-          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca',
+          'apiKey':'31941c79e11545b0bae1dd6a68c35d0e',
         }).then((value)
     {
       //print(value.data['articles'][0]['title']);
